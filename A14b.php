@@ -20,7 +20,7 @@ $keywords = $_POST['keywords'];
 $sql = "UPDATE data_table SET Keywords = '$keywords' WHERE Name = '$name'";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
-if(mysqli_query($con, $sql))
+if($result > 0)
 {
     echo "Keywords of " .$name. " have been successfully updated!";
 }

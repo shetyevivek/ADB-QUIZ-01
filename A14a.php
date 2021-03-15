@@ -13,7 +13,7 @@
 <?php
 include_once 'connection.php';
 
-$name = $_POST['name'];
+$name = $_POST['name1'];
 
 //check if form submitted
 if (isset($_POST['submit']))

@@ -13,7 +13,7 @@
 <?php
 include_once 'connection.php';
 
-$name = $_POST['name'];
+$name = $_POST['name2'];
 $keywords = $_POST['keywords'];
 
 // Retrieve the data

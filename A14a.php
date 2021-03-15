@@ -16,7 +16,7 @@ include_once 'connection.php';
 $name = $_POST['name1'];
 
 //check if form submitted
-if (isset($_POST['submit']))
+if (isset($_POST['submit1']))
 {
     $img_name = $_FILES['glryimage']['name'];
 

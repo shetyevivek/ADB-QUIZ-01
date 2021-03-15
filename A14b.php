@@ -17,7 +17,7 @@ $name = $_POST['name2'];
 $keywords = $_POST['keywords'];
 
 // Retrieve the data
-$sql = "UPDATE data_table SET Keywords = '$keywords' WHERE Name = '$name'";
+$sql = "UPDATE data_table SET Keywords = '$keywords' WHERE Name = '$name2'";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 if($result)

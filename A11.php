@@ -17,7 +17,7 @@ include_once 'connection.php';
 $sql = "SELECT * FROM data_table";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
-echo "<table border='1'>
+echo "<table border='1' padding='15px'>
 <tr>
 <th>Picture</th>
 <th>Image</th>

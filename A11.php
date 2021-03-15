@@ -28,7 +28,7 @@ while ($row = mysqli_fetch_array($result))
     echo "<tr>";
     if($row['Picture'] == NULL)
     {
-        echo "<td>no data available</td>";
+        echo "<td>NULL</td>";
     }
     else
     {
@@ -37,13 +37,13 @@ while ($row = mysqli_fetch_array($result))
 
     if($row['Image'] == NULL)
     {
-        echo "<td>no data available</td>";
+        echo "<td>NULL</td>";
     }
     else
     {
         echo "<td>" . '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'"/>' . "</td>";
     }
-    
+
     echo "</tr>";
 }
 echo "</table>";

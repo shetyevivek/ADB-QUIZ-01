@@ -8,32 +8,29 @@ if (isset($_POST['submit']))
 {
     $img_name = $_FILES['glryimage']['name'];
 
-    echo $img_name;
-    echo "<br><br>";
-
     //upload file
     if ($img_name!='')
     {
         $ext = pathinfo($img_name, PATHINFO_EXTENSION);
         $allowed = ['png', 'gif', 'jpg', 'jpeg'];
-
-        echo $ext;
-        echo "<br><br>";
     
         //check if it is valid image type
         if (in_array($ext, $allowed))
         {
-            $created = @date('Y-m-d H:i:s');
-
             // read image data into a variable for inserting
             $img_data = addslashes(file_get_contents($_FILES['glryimage']['tmp_name']));
+                    
+            // insert image into mysql database
+            $sql = "UPDATE people SET Image = '$img_data' WHERE Name = '$name'";
+            mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
+            header("Location: Upload_Image.php?st=success");
         }
         else
         {
-            header("Location: Q7.php?st=error");
+            header("Location: Upload_Image.php?st=error");
         }
     }
     else
-        header("Location: Q7.php");
+        header("Location: Upload_Image.php");
 }
 ?>

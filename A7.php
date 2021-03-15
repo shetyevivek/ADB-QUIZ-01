@@ -8,7 +8,7 @@ if (isset($_POST['submit']))
 {
     $img_name = $_FILES['glryimage']['name'];
 
-    echo '$img_name';
+    echo $img_name;
     echo "<br><br>";
 
     //upload file
@@ -17,7 +17,7 @@ if (isset($_POST['submit']))
         $ext = pathinfo($img_name, PATHINFO_EXTENSION);
         $allowed = ['png', 'gif', 'jpg', 'jpeg'];
 
-        echo '$ext';
+        echo $ext;
         echo "<br><br>";
     
         //check if it is valid image type

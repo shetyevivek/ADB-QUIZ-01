@@ -33,17 +33,26 @@ if (isset($_POST['submit']))
             $img_data = addslashes(file_get_contents($_FILES['glryimage']['tmp_name']));
                     
             // insert image into mysql database
-            $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name'";
-            mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
+            $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name1'";
+            $result = mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
             
-            echo "Image of " .$name. " has been successfully updated!"
+            if($result)
+            {
+                echo "Image of " .$name1. " has been successfully updated!"
+            }
+            else
+            {
+                echo $name1. " does not exists!"
+            }
         }
         else
         {
-            echo .$name. " does not exist!"
+            echo "Invalid Image type!"
         }
     }
     else
-        header("Location: Q14.html");
+        echo "Please select an image!";
 }
+
+mysqli_close($con);
 ?>

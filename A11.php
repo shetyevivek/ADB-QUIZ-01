@@ -19,8 +19,8 @@ $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 echo "<table border='1'>
 <tr>
-<th>Picture</th>
-<th>Image</th>
+<th style='padding:15px;'>Picture</th>
+<th style='padding:15px;'>Image</th>
 </tr>";
 
 while ($row = mysqli_fetch_array($result))

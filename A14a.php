@@ -36,18 +36,11 @@ if (isset($_POST['submit1']))
             $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name'";
             $result = mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
             
-            if($result)
-            {
-                echo "Image of " .$name. " has been successfully updated!";
-            }
-            else
-            {
-                echo $name. " does not exists!";
-            }
+            echo "Image of " .$name. " has been successfully updated!";
         }
         else
         {
-            echo "Invalid Image type!"
+            echo "Invalid Image type!";
         }
     }
     else

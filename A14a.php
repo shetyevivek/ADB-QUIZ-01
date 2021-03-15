@@ -36,7 +36,14 @@ if (isset($_POST['submit1']))
             $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name'";
             $result = mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
             
-            echo "Image of " .$name. " has been successfully updated!";
+            if(mysqli_affected_rows($con))
+            {
+                echo "Image of " .$name. " has been successfully updated!";
+            }
+            else
+            {
+                echo $name. " does not exists!";
+            }
         }
         else
         {

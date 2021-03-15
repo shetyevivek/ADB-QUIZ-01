@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_array($result))
     echo "<tr>";
     if($row['Name'] == NULL)
     {
-        echo "<td style='padding:15px;'>NULL</td>";
+        echo "<td style='padding:15px;'>No data available</td>";
     }
     else
     {
@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_array($result))
 
     if($row['Distance'] == NULL)
     {
-        echo "<td style='padding:15px;'>NULL</td>";
+        echo "<td style='padding:15px;'>No data available</td>";
     }
     else
     {
@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_array($result))
 
     if($row['Image'] == NULL)
     {
-        echo "<td style='padding:15px;'>NULL</td>";
+        echo "<td style='padding:15px;'>No data available</td>";
     }
     else
     {
@@ -60,7 +60,7 @@ while ($row = mysqli_fetch_array($result))
 
     if($row['Keywords'] == NULL)
     {
-        echo "<td style='padding:15px;'>NULL</td>";
+        echo "<td style='padding:15px;'>No data available</td>";
     }
     else
     {

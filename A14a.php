@@ -38,11 +38,11 @@ if (isset($_POST['submit1']))
             
             if($result)
             {
-                echo "Image of " .$name. " has been successfully updated!"
+                echo "Image of " .$name. " has been successfully updated!";
             }
             else
             {
-                echo $name. " does not exists!"
+                echo $name. " does not exists!";
             }
         }
         else

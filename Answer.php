@@ -1,5 +1,5 @@
 <?php
-include_once 'dbconnect.php';
+include_once 'connection.php';
 
 $name = $_POST['txtName'];
 
@@ -21,7 +21,7 @@ if (isset($_POST['submit']))
             $img_data = addslashes(file_get_contents($_FILES['glryimage']['tmp_name']));
                     
             // insert image into mysql database
-            $sql = "UPDATE people SET Image = '$img_data' WHERE Name = '$name'";
+            $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name'";
             mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
             header("Location: Upload_Image.php?st=success");
         }

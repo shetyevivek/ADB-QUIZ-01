@@ -14,15 +14,15 @@
 include_once 'connection.php';
 
 $name = $_POST['name2'];
-$keywords = $_POST['keywords'];
+$author = $_POST['author'];
 
 // Retrieve the data
-$sql = "UPDATE data_table SET Keywords = '$keywords' WHERE Name = '$name'";
+$sql = "UPDATE data_table SET Author = '$author' WHERE Name = '$name'";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
 if(mysqli_affected_rows($con))
 {
-    echo "Keywords of " .$name. " have been successfully updated!";
+    echo "Author of " .$name. " have been successfully updated!";
 }
 else
 {

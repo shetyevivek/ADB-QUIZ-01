@@ -17,7 +17,7 @@ include_once 'connection.php';
 $sql = "SELECT * FROM data_table";
 $result = mysqli_query($con, $sql) or die('Error ' . mysqli_error($con));
 
-echo "<table border='1' style='padding:15px;'>
+echo "<table border='1'>
 <tr>
 <th>Picture</th>
 <th>Image</th>
@@ -28,20 +28,20 @@ while ($row = mysqli_fetch_array($result))
     echo "<tr>";
     if($row['Picture'] == NULL)
     {
-        echo "<td>NULL</td>";
+        echo "<td style='padding:15px;'>NULL</td>";
     }
     else
     {
-        echo "<td>" . $row['Picture'] . "</td>";
+        echo "<td style='padding:15px;'>" . $row['Picture'] . "</td>";
     }
 
     if($row['Image'] == NULL)
     {
-        echo "<td>NULL</td>";
+        echo "<td style='padding:15px;'>NULL</td>";
     }
     else
     {
-        echo "<td>" . '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'"/>' . "</td>";
+        echo "<td style='padding:15px;'>" . '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'"/>' . "</td>";
     }
 
     echo "</tr>";

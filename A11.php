@@ -26,8 +26,24 @@ echo "<table border='1'>
 while ($row = mysqli_fetch_array($result))
 {
     echo "<tr>";
-    echo "<td>" . $row['Picture'] . "</td>";
-    echo "<td>" . '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'"/>' . "</td>";
+    if($row['Picture'] == NULL)
+    {
+        echo "<td>no data available</td>";
+    }
+    else
+    {
+        echo "<td>" . $row['Picture'] . "</td>";
+    }
+
+    if($row['Image'] == NULL)
+    {
+        echo "<td>no data available</td>";
+    }
+    else
+    {
+        echo "<td>" . '<img src="data:image/jpeg;base64,'.base64_encode($row['Image']).'"/>' . "</td>";
+    }
+    
     echo "</tr>";
 }
 echo "</table>";

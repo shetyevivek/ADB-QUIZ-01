@@ -33,16 +33,16 @@ if (isset($_POST['submit1']))
             $img_data = addslashes(file_get_contents($_FILES['glryimage']['tmp_name']));
                     
             // insert image into mysql database
-            $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name1'";
+            $sql = "UPDATE data_table SET Image = '$img_data', Picture = '$img_name' WHERE Name = '$name'";
             $result = mysqli_query($con, $sql) or die("Error " . mysqli_error($con));
             
             if($result)
             {
-                echo "Image of " .$name1. " has been successfully updated!"
+                echo "Image of " .$name. " has been successfully updated!"
             }
             else
             {
-                echo $name1. " does not exists!"
+                echo $name. " does not exists!"
             }
         }
         else

@@ -8,8 +8,8 @@
 </head>
 <body>
 	<div>
-		<h2>Student ID: 1001821620<br>Name: Vivek Vishwanath Shetye</h2>
-	</div><br><br><br>
+		<h2>Student ID: 1001821620<br>Name: Vivek Vishwanath Shetye</h2><br><br><br>
+	</div>
 
 	<div>
 		<a href="#">Q10 - Image of Mars displayed below!</a><br><br>

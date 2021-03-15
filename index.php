@@ -12,7 +12,9 @@
 	</div><br><br><br>
 
 	<div>
-		<a href="Q10.html">Q10 - Click here!</a><br><br>
+		<a href="#">Q10 - Image of Mars displayed below!</a><br><br>
+
+		<img src="mars.jpg" width="200" height="200"><br><br><br><br>
 
 		<a href="Q11.html">Q11 - Click here!</a><br><br>
 
